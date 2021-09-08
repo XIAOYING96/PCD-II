@@ -1,32 +1,28 @@
-#include<stdio.h>
-#pragma warning(disable:4996)
-
-typedef struct {
-	int payrollNo;
-	float hourlyRate;
-	int hoursWorked;
-}PartTime;
-
-int main() {
-	FILE* fpPartTime;
-
-	PartTime pt;
-
-	fpPartTime = fopen("PartTime.txt", "r");
-
-	int wage;
-
-	if (fpPartTime == NULL) {
-		printf("Unable to open the file");
-		exit(-1);
-	}
-
-	else
-		printf("Payroll number\t\t Wage(RM)\n");
-	while (fscanf(fpPartTime, "%d %lf %d", &pt.payrollNo, &pt.hourlyRate, &pt.hoursWorked) != EOF) {
-		wage = pt.hourlyRate * pt.hoursWorked;
-
-		printf("%d %.2lf", pt.payrollNo, wage);
-	}
-	fclose(fpPartTime);
-}
+//#include<stdio.h>
+//#pragma warning(Disable:4996)
+//
+//int main() {
+//	FILE* fptr,*fptr1,*fptr2;
+//
+//	fptr=fopen("integer.dat", "rb");
+//	fptr1=fopen("even.dat", "wb");
+//	fptr2=fopen("add.dat", "wb");
+//
+//	int data;
+//
+//	if (fptr == NULL || fptr1 == NULL || fptr2 == NULL) {
+//		printf("Error message !");
+//		exit(-1);
+//	}
+//	while (fread(&data, sizeof(int), 1, fptr)!=0) {
+//		if (data % 2 == 0)
+//			fwrite(&data, sizeof(int), 1, fptr1);
+//
+//		else
+//			fwrite(&data, sizeof(int), 1, fptr2);
+//
+//		fclose(fptr);
+//		fclose(fptr1);
+//		fclose(fptr2);
+//	}
+//}
