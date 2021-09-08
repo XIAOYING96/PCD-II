@@ -1,0 +1,2 @@
+1000 Peter 110,Taman-Cantik,KL       40.0
+1002 Jane  222,JalanA10,Taman-Indah  50.0
